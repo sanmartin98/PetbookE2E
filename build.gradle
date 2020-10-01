@@ -32,6 +32,11 @@ ext{
     serenityCucumberVersion = '1.9.45'
 }
 
+test {
+    testLogging.showStandardStreams = true
+    testLogging.exceptionFormat = 'full'
+}
+
 dependencies {
     implementation group: 'org.assertj', name: 'assertj-core', version: '3.15.0'
     implementation 'org.slf4j:slf4j-simple:2.0.0-alpha0'

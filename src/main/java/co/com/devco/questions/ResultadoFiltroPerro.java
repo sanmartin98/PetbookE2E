@@ -3,7 +3,7 @@ package co.com.devco.questions;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 
-import static co.com.devco.userinterfaces.PetbookHomePage.IMAGEN_GATO_3;
+import static co.com.devco.userinterfaces.PetbookHomePage.IMAGEN_GATO_POS_3;
 
 public class ResultadoFiltroPerro implements Question<Boolean> {
     public ResultadoFiltroPerro(){
@@ -16,6 +16,6 @@ public class ResultadoFiltroPerro implements Question<Boolean> {
 
     @Override
     public Boolean answeredBy(Actor actor) {
-        return !IMAGEN_GATO_3.resolveFor(actor).isVisible();
+        return !IMAGEN_GATO_POS_3.resolveFor(actor).isVisible();
     }
 }

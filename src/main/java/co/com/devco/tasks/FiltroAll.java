@@ -9,22 +9,19 @@ import net.serenitybdd.screenplay.actions.Open;
 import static co.com.devco.userinterfaces.PetbookHomePage.*;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
-public class BuscarGato implements Task {
-    private String gato;
+public class FiltroAll implements Task {
 
-    public BuscarGato(String gato) {
-        this.gato = gato;
-    }
+    public FiltroAll() {}
 
-    public static Performable elGato(String gato) {
-        return instrumented(BuscarGato.class, gato);
+    public static Performable filtrar() {
+        return instrumented(FiltroAll.class);
     }
 
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
                 Open.url(PETBOOK_HOME_PAGE),
-                Click.on(IMAGEN_GATO_POS_3)
+                Click.on(FILTRO_ALL)
         );
     }
 }

@@ -6,7 +6,7 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Open;
 
-import static co.com.devco.userinterfaces.PetbookHomePage.IMAGEN_PERRO_1;
+import static co.com.devco.userinterfaces.PetbookHomePage.IMAGEN_PERRO_POS_1;
 import static co.com.devco.userinterfaces.PetbookHomePage.PETBOOK_HOME_PAGE;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
@@ -25,7 +25,7 @@ public class BuscarPerro implements Task {
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
                 Open.url(PETBOOK_HOME_PAGE),
-                Click.on(IMAGEN_PERRO_1)
+                Click.on(IMAGEN_PERRO_POS_1)
         );
     }
 }
